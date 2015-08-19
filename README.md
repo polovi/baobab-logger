@@ -1,4 +1,4 @@
-# Logger for Baobab
+# Logger for [Baobab](https://github.com/Yomguithereal/baobab)
 Logger for Baobab inspired by [Timothy Klim's redux-logger](https://github.com/fcomb/redux-logger).
 
 ## Install
