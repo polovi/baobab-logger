@@ -1,6 +1,6 @@
 {
   "name": "baobab-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Logger for Baobab",
   "main": "build/logger.js",
   "scripts": {
