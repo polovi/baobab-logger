@@ -1,0 +1,25 @@
+{
+  "name": "baobab-logger",
+  "version": "0.0.1",
+  "description": "Logger for Baobab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polovi/baobab-logger.git"
+  },
+  "keywords": [
+    "baobab",
+    "logger",
+    "baobab-logger",
+    "log"
+  ],
+  "author": "Tomas Polovincak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/polovi/baobab-logger/issues"
+  },
+  "homepage": "https://github.com/polovi/baobab-logger#readme"
+}
