@@ -1,5 +1,5 @@
 # Logger for [Baobab](https://github.com/Yomguithereal/baobab)
-Logger for Baobab inspired by [Timothy Klim's redux-logger](https://github.com/fcomb/redux-logger).
+Logger for Baobab inspired by [redux-logger](https://github.com/fcomb/redux-logger).
 
 ## Install
 ```cmd
@@ -27,4 +27,4 @@ logger(tree);
 Released under the MIT license.
 
 ## Credits & Notes
-This logger is largely based on [Timothy Klim's redux-logger](https://github.com/fcomb/redux-logger) licensed under the MIT license.
+This logger is largely based on [redux-logger](https://github.com/fcomb/redux-logger) licensed under the MIT license.
