@@ -2,7 +2,7 @@
   "name": "baobab-logger",
   "version": "0.0.1",
   "description": "Logger for Baobab",
-  "main": "index.js",
+  "main": "build/logger.js",
   "scripts": {
     "build": "$(npm bin)/babel src --out-dir build"
   },
