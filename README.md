@@ -3,7 +3,7 @@ Logger for Baobab inspired by [redux-logger](https://github.com/fcomb/redux-logg
 
 ## Install
 ```cmd
-$ nmp install --save baobab-logger
+$ npm install --save baobab-logger
 
 ```
 
