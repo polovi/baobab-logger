@@ -45,5 +45,5 @@ function createLogger(cursor) {
   });
 }
 
-exports['default'] = logger;
+exports['default'] = createLogger;
 module.exports = exports['default'];

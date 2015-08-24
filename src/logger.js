@@ -32,4 +32,4 @@ function createLogger(cursor, options = {}) {
   });
 }
 
-export default logger;
+export default createLogger;
