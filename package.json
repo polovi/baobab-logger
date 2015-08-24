@@ -1,6 +1,6 @@
 {
   "name": "baobab-logger",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Logger for Baobab",
   "main": "build/logger.js",
   "scripts": {
@@ -25,5 +25,8 @@
   "devDependencies": {
     "babel": "^5.8.21",
     "babel-core": "^5.8.22"
+  },
+  "dependencies": {
+    "baobab": "^2.0.0-rc1"
   }
 }

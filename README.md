@@ -1,5 +1,7 @@
-# Logger for [Baobab](https://github.com/Yomguithereal/baobab)
-Logger for Baobab inspired by [redux-logger](https://github.com/fcomb/redux-logger).
+# Logger for Baobab
+Logger for [Baobab](https://github.com/Yomguithereal/baobab/tree/v2) inspired by [redux-logger](https://github.com/fcomb/redux-logger).
+
+![baobab-logger](http://i.imgur.com/2Qkqe2D.png)
 
 ## Install
 ```cmd
@@ -19,9 +21,32 @@ const tree = new Baobab({
   }
 });
 
-logger(tree);
+logger(tree, { collapsed: true });
+logger(tree.select('palette'));
 ```
-> Need to be Baobab root, because cursors have only reduced informations about change.
+
+## Configuration
+```js
+logger(cursor[, options])
+```
+
+### Options
+
+#### collapsed (Boolean)
+Output informations grouped or not.
+
+*Default: `false`*
+
+#### logger (Object)
+`console` implementation API or custom wrapped library for output.
+
+*Default: `window.console`*
+
+#### level (String)
+Log level type: `log`, `info`, `warn`, `error`.
+
+*Default: `log`*
+
 
 ## License
 Released under the MIT license.
