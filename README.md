@@ -1,7 +1,7 @@
 # Logger for Baobab
 Logger for [Baobab](https://github.com/Yomguithereal/baobab/tree/v2) inspired by [redux-logger](https://github.com/fcomb/redux-logger).
 
-![baobab-logger](http://i.imgur.com/2Qkqe2D.png)
+![baobab-logger](http://i.imgur.com/mZ9oMrF.png?1)
 
 ## Install
 ```cmd

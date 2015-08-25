@@ -3,6 +3,7 @@
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
+exports['default'] = createLogger;
 var pad = function pad(num) {
   return ('0' + num).slice(-2);
 };
@@ -20,30 +21,44 @@ function createLogger(cursor) {
     var previousData = _e$data.previousData;
     var currentData = _e$data.currentData;
 
-    var actions = e.data.transaction || [{ path: e.target.path, type: e.type }];
+    var actions = e.data.transaction || [{ path: e.target.path, type: e.type, value: e.target.get() }];
     var time = new Date();
+    var message = '₸ Baobab ' + JSON.stringify(actions.map(function (action) {
+      return action.type;
+    })) + ' @ ' + time.getHours() + ':' + pad(time.getMinutes()) + ':' + pad(time.getSeconds());
 
-    actions.map(function (action) {
-      var message = 'Baobab ' + JSON.stringify(action.path) + '.' + action.type + ' @ ' + time.getHours() + ':' + pad(time.getMinutes()) + ':' + pad(time.getSeconds());
+    try {
+      console[options.collapsed ? 'groupCollapsed' : 'group'](message);
+    } catch (e) {
+      console.log('%c ' + message, 'font-weight: bold');
+    }
 
+    logger[level]('%c prev state', 'color: #9E9E9E; font-weight: bold', previousData);
+
+    if (actions.length !== 1) {
       try {
-        console[options.collapsed ? 'groupCollapsed' : 'group'](message);
-      } catch (e) {
-        console.log('---------');
-      }
+        console.group('actions:');
+      } catch (e) {}
+    }
 
-      logger[level]('%c prev state ', 'color: #9E9E9E; font-weight: bold', previousData);
-      logger[level]('%c action', 'color: #03A9F4; font-weight: bold', action);
-      logger[level]('%c next state ', 'color: #29bf2f; font-weight: bold', currentData);
+    actions.forEach(function (action) {
+      logger[level]('%c ' + JSON.stringify(action.path) + '.' + action.type, 'color: #03A9F4; font-weight: bold', action.value);
+    });
 
+    if (actions.length !== 1) {
       try {
         console.groupEnd();
-      } catch (e) {
-        console.log('---------');
-      }
-    });
+      } catch (e) {}
+    }
+
+    logger[level]('%c next state ', 'color: #29bf2f; font-weight: bold', currentData);
+
+    try {
+      console.groupEnd();
+    } catch (e) {
+      console.log("\n");
+    }
   });
 }
 
-exports['default'] = createLogger;
 module.exports = exports['default'];
